@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/pages/css/profile.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+         PROFILE PAGE
+      </div>
+      <form id="form" action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" id="firstName" placeholder="Enter  first your name" required/>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text"id="lastName"placeholder="Enter your last name" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="date" id="dob" placeholder="dd/mm/yyyy" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Age</span>
+            <input type="tel" id="age" placeholder="age" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <input type="gender" id="gender" placeholder="Enter your gender" required />
+          </div>
+          <div class="input-box">
+            <span class="details"> contact number</span>
+            <input type="text" id="contact"placeholder=" contact number" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Email ID:</span>
+            <input type="text" id="email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Language</span>
+            <input type="text" id="Language"placeholder=" Enter your Language" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Aadhar_number</span>
+            <input type="text" id="Aadharnumber" placeholder="Enter your Aadhar_number">
+          </div>
+
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" id="Address" placeholder="Enter your Address">
+          </div>
+
+
+          <div class="input-box">
+            <span class="details">state</span>
+            <input type="text" id="state" placeholder="Enter your state ">
+          </div>
+
+          <div class="input-box">
+            <span class="details">country</span>
+            <input type="text" id="country" placeholder="Enter your country ">
+          </div>
+
+
+
+
+        </div>
+<div  class="save">
+          <button id="done">Save</button>
+          <button id="delete">Edit</button>
+         <button id="Cancel">Cancel</button>
+        </div>
+    </form>
+  </body>
+
+  <script>
+       
+      const oneUser = JSON.parse(localStorage.getItem("profile"));
+      const user_info = JSON.parse(localStorage.getItem("card-data"));
+      let select_user = user_info.find(function (event) {
+        let customerEmail = event["userEmail"];
+        if (oneUser == customerEmail) {
+          return true;
+        } 
+      });
+      console.log(select_user);
+      // to get value from registration form
+
+      let firstName = document.getElementById("firstName").value = select_user["firstName"];
+      let lastName = document.getElementById("lastName").value = select_user["lastName"];
+      let dob = document.getElementById("dob").value = select_user["dob"];
+      let userEmail = document.getElementById("email").value = select_user["userEmail"];
+      let contactNumber= document.getElementById("contact").value = select_user["contactNumber"];
+      let Address = document.getElementById("Address").value = select_user["Address"];
+      let age=document.getElementById("age").value = select_user["age"];
+      let gender = document.getElementById("gender").value = select_user["gender"];
+      let Aadharnumber = document.getElementById("Aadharnumber").value = select_user["Aadharnumber"];
+      let state = document.getElementById("state").value = select_user["state"];
+      let country = document.getElementById("country").value = select_user["country"];
+      let Language =document.getElementById("Language").value = select_user["Language"];
+
+      // Compare the values
+
+      //  userName = document.getElementById("firstname");
+      //  lastName = document.getElementById("lastname");
+      //  dob = document.getElementById("dob");
+      //  email = document.getElementById("Email");
+      //  contactNumber = document.getElementById("contact");
+      //  Address = document.getElementById("Address");
+      //  gender = document.getElementById("gender");
+      //  Aadharnumber = document.getElementById("Aadharnumber");
+      //  state = document.getElementById("state");
+      //  country = document.getElementById("country");
+
+
+      
+       // to replace the values
+
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+       
+      let firstName = document.getElementById("firstName").value = select_user["firstName"];
+      let lastName = document.getElementById("lastName").value = select_user["lastName"];
+      let dob = document.getElementById("dob").value;
+      let userEmail = document.getElementById("email").value = select_user["userEmail"];
+      let contactNumber= document.getElementById("contact").value;
+      let Address = document.getElementById("Address").value;
+      let age = document.getElementById("age").value;
+      let gender = document.getElementById("gender").value;
+      let Aadharnumber = document.getElementById("Aadharnumber").value;
+      let state = document.getElementById("state").value;
+      let country = document.getElementById("country").value;
+      let Language =document.getElementById("Language").value;
+
+
+        let newData = {
+          firstName,
+          lastName,
+          dob,
+          userEmail,
+          contactNumber, 
+          Address,
+          age,
+          gender,
+          Aadhar_number,
+          state,
+          country,
+          Language
+        };
+        console.log(newData);
+
+
+        // assign the value to
+        if(oneUser == userEmail) { 
+
+        
+        const combineData = Object.assign(select_user, newData);
+        console.log(combineData);
+        alert("successfully changed");
+        let findIndex = user_info.indexOf(select_user);
+        console.log(findIndex)
+        user_info[findIndex] = combineData;
+        localStorage.setItem("card-data", JSON.stringify(user_info));
+        }
+        else{
+          alert("Are you lusupunda don't change the email");
+        }
+      });
+
+      
+
+
+
+      // delete option in the page
+      let delete_user = document.getElementById("delete");
+      delete_user.addEventListener("click", function (event) {
+        event.preventDefault();
+        let indexDel = user_info.indexOf(select_user);
+        let msg = confirm("Are you sure you want to delete this account");
+        if (msg !== true) {
+          return;
+        } else {
+          user_info.splice(indexDel, 1); 
+          // remove array Element 
+
+          console.log(user_info);
+          localStorage.setItem("card-data", JSON.stringify(card-data));
+        }
+      });
+
+
+      // logout option 
+
+      let logout_user = document.getElementById("delete");
+      logout_user.addEventListener("delete", function (event) {
+        event.preventDefault();
+        let indexDel = user_info.indexOf(select_user);
+        let msg = confirm("Are you sure you want to logout this account");
+        if (msg !== true) {
+          return;
+        } else {
+         window.location.href="./homepage.html";
+        }
+      });
+    </script>
+
+</html>
+
+
+
+
