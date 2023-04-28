@@ -1,0 +1,287 @@
+.main{
+    position: fixed;
+}
+.task-page{
+    margin-left: 450px;
+}
+.top{
+    margin: 10px 0px 80px -90px;
+}
+.top-1{
+    font-size: 36px;
+}
+.dot{
+    color: #0083ff;
+    font-size: 48px;
+}
+.top-2{
+    color: #676262;
+    margin-bottom: 50px;
+    font-size: 26px;
+}
+.date-task{
+    display: flex;
+    font-size: 26px;
+}
+.date{
+    margin-left: 5px;
+    font-weight: 900;
+    font-size: 26px;
+}
+.day,.month{
+    font-size: 22px;
+}
+#add-task{
+    width: 455px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    font-size: 16px;
+    margin-left: 40px;
+    margin-top: 25px;
+    padding: 20px;
+    outline: none;
+}
+#addbtn{
+    width: 80px;
+    height: 38px;
+    background-color: #0083ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 28px;
+    margin-left: 20px;
+}
+/* .taskDetails{
+    position: relative;
+    left: 480px;
+    bottom: 800px;
+    height: 700px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color:white;
+    display: none;
+    animation-name: down;
+    animation-duration: 3s;
+}
+@keyframes down{
+    0%{transform: translateY(-1200px);}
+    50%{transform: translateY(-10px);}
+} */
+.taskDetails{
+    background-color: white;
+    width: 500px;
+    height: 100vh;
+    position: absolute;
+    bottom: 1px;
+    left: 1050px;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    display: none;
+    animation-name: out;
+    animation-duration: 1.25s;
+}
+@keyframes out{
+    0%{transform: translateX(1200px);}
+}
+.taskDetails h2 span{
+    float: right;
+    cursor: pointer;
+}
+
+.taskDetails button{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-top: 40px;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.taskDetails button:hover{
+    background-color:aliceblue;
+}
+#Priority, #duedate{
+    margin-bottom: 30px;
+    margin-left: 20px;
+    padding: 8px;
+    font-size: 16px;
+}
+#duedate, #duetime{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+#notes{
+    border: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+.taskDetails h3{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#radio{
+    position: relative;
+    bottom: 5px;
+    
+}
+.taskDetails p{
+    color: #aaaaaa;
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+}
+.fa-bell, .fa-bell,.fa-user,.fa-suitcase{
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+}
+.files{
+    border: 1px dotted grey;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#deletebtn,#checkmark{
+    background-color: red;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    text-align: center;
+    height: 50px;
+    width: 55px;
+    position:relative;
+    left: 100px;
+    cursor: pointer;
+
+} 
+#checkmark{
+    background-color: #0083ff;
+    color: white;
+    margin: 20px;
+    font-size: 26px;
+    font-weight: 900;
+}
+#tasklist li{
+    list-style: none;
+    background-color: white;
+    margin: 30px;
+    width: 55%;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    margin-left: -5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.02),0 2px 18px rgba(0,0,0,0.05);
+}
+
+#tasklist span{
+    padding-top: 10px;
+    width: 250px;
+    color: black;
+}
+#suggestionlist li{
+    list-style: none;
+    width: 325px;
+    height: 90px;
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 15px;
+    font-size: 16px;   
+    font-weight: 600; 
+}
+#suggestionlist span{
+    margin-left: 40px;
+}
+#sugduedate{
+    color: #0083ff;
+    font-size: 16px;
+}
+#suggestionlist li:hover{
+    background-color: #EDEDED;
+}
+.fa-plus{
+    color: #0083ff;
+    position: absolute;
+    right: 310px;
+    font-size: 24px;
+    cursor: pointer;
+}
+#todosdescrip{
+    color: #0083FF;
+    display: block;
+    font-weight: 500;
+    padding-top: 10px;
+}
+#taskspan{
+    margin-left: -90px;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    /* display: flex; */
+}
+.addtasks{
+    height: 600px;
+    overflow: scroll;
+}
+.suggestiontask{
+    background-color: white;
+    width: 378px;
+    height: 100vh;
+    position: absolute;
+    bottom: 1px;
+    left: 1125px;
+    padding: 30px;
+    border-radius: 50px;
+    animation-name: out;
+    animation-duration: 1.25s;
+}
+@keyframes out{
+    0%{transform: translateX(1200px);}
+}
+.fa-search{
+    margin-left: -20px;
+    font-size: 18px;
+}
+#searchinput{
+    height: 40px;
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-bottom: #676262 1px solid;
+    font-size: 18px;
+    outline: none;
+}
+.sidebaractivator{
+    position: absolute;
+    top: 440px;
+    left: 1415px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 18px rgba(0,0,0,.08);
+    width: 100px;
+    cursor: pointer;
+}
+#subtask{
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+#subtaskbtn{
+    margin-top: -10px;
+    margin-left: -12px;
+    box-shadow: none;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "freshtime",
+  "version": "1.0.0",
+  "description": "About:",
+  "main": "main.js",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/aravind.venkedeshwaran__web_project.git"
+  },
+  "author": "aravindramvjs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/aravind.venkedeshwaran__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/aravind.venkedeshwaran__web_project#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-validator": "^6.15.0",
+    "http-server": "^14.1.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3"
+  },
+  "keywords": []
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page titlie -->
+    <title>Freshtime | Dashboard</title>
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+        <!-- adding favicon -->
+        <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="../assets/Images/favicon.png">
+
+        <!-- Ubuntu Font Link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <style> @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap'); </style>
+    
+        <!-- bootstrap for adding icon  -->
+        <script
+        src="https://kit.fontawesome.com/ee40c53027.js"
+        crossorigin="anonymous"
+        integrity="">
+        </script>
+</head>
+<body>
+<!-- the main dashborad starts -->
+<div class="main">
+    <div class="dashboard">
+    
+        <!-- Left side content starts -->
+        <div class="main-dash">
+    
+            <!-- The Top content of the dashboard starts -->
+            <div class="top-dash">
+                <label for="search">
+                    <input type="search" id="search" placeholder="Search">
+                    <i class="fa fa-search"></i>
+                </label>
+                <p>Monday, 19 December 2022</p>
+            </div>
+            <!-- The Top content of the dashboard ended -->
+    
+    
+            <!-- The Second row starts -->
+            <div class="day-overview">
+    
+                <div class="day-box" style="margin-right: 20px;">
+                    <p>Habit Done ...</p>
+                    <div class="wrap">
+                        <img src="../assets/Images/run.png" alt="Run" width="50px">
+                        <p>3 Habits Done</p>
+                    </div>
+                </div>
+            <div class="day-box" style="margin-right: 20px;">
+                <p>Sleep...</p>
+                <div class="wrap">
+                    <img src="../assets/Images/sleep.png" alt="sleep" width="50px">
+                    <p>6 Hrs</p>
+                </div>
+            </div>
+            <div class="day-box" style="margin-right: 20px;">
+                <p>Completed Task...</p>
+                <div class="wrap">
+                    <img src="../assets/Images/completed.png" alt="Completed task" width="45px">
+                    <p>25%</p>
+                </div>
+            </div>
+            <div class="day-box" style="margin-right: 20px;">
+                <p>Incompleted Task</p>
+                <div class="wrap">
+                    <img src="../assets/Images/incomplete.png" alt="Incompleted task" width="45px">
+                    <p>75 %</p>
+                </div>
+            </div>
+        </div>
+        <!-- The Second row ended -->
+    
+        <!-- The Third Row Starts -->
+            <div class="overall">
+    
+                <div>
+                    <div class="overview">
+                        <i class='far fa-calendar-check' ></i>
+                        <div >
+                            <h2>Today's Productivity</h2>
+                            <p class="percent">37%</p>
+                        </div>
+                    </div>
+                    <div class="overview">
+                        <i class='far fa-calendar-alt'></i>
+                        <div>
+                            <h2>Weekly Productivity</h2>
+                            <p class="percent">56%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="this-month-overview">
+                    <p>Your Productive Score</p>
+                    <img src="../assets/Images/month overview (2).png" alt="Month Overview">
+                </div>
+    
+            </div>
+            <!-- The Third Row ended -->
+    
+        <!-- The Forth Row starts -->
+            <div class="report">
+                <img src="../assets/Images/Report.png" alt="Report" width="500px">
+            </div>
+        <!-- The Forth Row starts -->
+    </div>
+    <!-- Left side content starts -->
+    
+        <!-- right side dashboard added-->
+        <div class="side-dash">
+            <div class="profile">
+                <i class='far fa-comment'></i>
+                <a href="profile.html"><img src="../assets/Images/profile.jpg" alt="avator" width="70px"></a>
+                <i class="fa fa-bell"></i>
+            </div>
+    
+            <div class="calendar">
+                <p>Welcome <span id="username"></span>!</p>
+                <img src="../assets/Images/calendar.png "alt="calendar" width="280px">
+            </div>
+            <div class="enjoy">
+                <img src="../assets/Images/relax-in-sofa.svg" alt="working" width="350px">
+            </div>
+        </div>
+        <!-- right side dashboard added-->
+    
+    </div>
+</div>
+<!-- the main dashborad starts -->
+</body>
+<script src="../assets/JS/template.js"></script>
+</html>

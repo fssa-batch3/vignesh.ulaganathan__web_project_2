@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page title added -->
+    <title>FRESHTIME | task page</title>
+
+    <!-- css file linked -->
+    <link rel="stylesheet" href="../assets/css/task.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/notify.css">
+
+    <!-- adding favicon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="../assets/Images/favicon.png">
+
+    <!-- ubuntu font link added -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    </style>
+
+
+    <!-- bootstrap for adding icon  -->
+    <script src="https://kit.fontawesome.com/ee40c53027.js" crossorigin="anonymous" integrity="">
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+    </style>
+
+</head>
+
+<body>
+
+    <!-- main container of task starts  -->
+    <div class="main">
+
+        <!-- task section starts -->
+        <!-- Header -->
+        <div class="task-page">
+            <div class="top">
+                <p class="top-1">Good Morning, <span id="username"></span><span class="dot">.</span></p>
+                <p class="top-2">If not now. When?</p>
+                <div class="date-task">
+                    <p><span id="digitaltime"></span> <br> <span class="day"></span> <br> <span class="date"></span> <br> <span class="month"></span>
+                    </p>
+                    <input for="taskinput" type="text" name="addtask" id="add-task" placeholder="+  Add Task..." autofocus>
+                    <button id="addbtn">ADD</button>
+                </div>
+            </div>
+
+
+            <!-- Task List -->
+            <div class="addtasks">
+                <ul id="tasklist"></ul>
+                <div id="task_notes_active"></div>
+            </div>
+
+        </div>
+
+
+        <!-- Task Details -->
+        <div class="taskDetails">
+            <h2 id="taskName"><span id="close">&times;</span></h2>
+
+            <button><i class="fa fa-bell" style="color:#f7bb07"></i>Remind Me</button>
+            <Button><i class="fa fa-hashtag" style="color:violet"></i>Tags</Button>
+            <button><i class="fa fa-user"></i>Personal</button>
+            <button><i class="fa fa-suitcase" style="color:skyblue"></i>Work</button> <br>
+            <label for="time">Due Time: </label>
+            <input type="time" id="duetime"> <br>
+            <label for="date">Due Date: </label>
+            <input type="date" id="duedate"> <br>
+
+            <label for="Priority">Priority Of Your Task: </label>
+            <select name="Priority" id="Priority">
+                <option value="Less Priority">Less Priority</option>
+                <option value="Mid Priority">Mid Priority</option>
+                <option value="High Priority">High Priority</option>
+                <option value="Waste Of Time">Waste Of Time</option>
+            </select>
+            <h3>Notes:</h3>
+            <textarea placeholder="Insert Your Notes Here" id="notes" rows="6" cols="45" ></textarea>
+            <div class="subtask">
+                <h3>Sub Task:</h3>
+                <!-- <button id="subtaskbtn"><i class="fa fa-square-o"></i> Add Sub Task</button> <br>-->
+                <input type="checkbox" id="subtaskcheck">
+                <input type="text" for="subtaskcheck" id="subtask" placeholder="Add Task Sub"> 
+            </div>
+            <h3>Attachment:</h3>
+            <p class="files">Click here to add / drop your files here</p>
+        </div>
+        <!-- task details ends -->
+
+
+        <!-- Suggestion Task -->
+        <!-- <div class="suggestiontask">
+            <div class="suggestionheader">
+                <h3><i class="fa fa-lightbulb-o"></i> Suggested Task</h3> <br>
+                <input  id="searchinput" type="search" placeholder="search"><i class="fa fa-search"></i></input>
+            </div>
+            <div class="suggestiontasklist">
+                <ul id="suggestionlist">
+                </ul>
+            </div>
+        </div>
+
+
+         Suggestion Bar -->
+       <!-- <div class="sidebaractivator">
+            <div id="bulb"><i class="fa fa-lightbulb-o"></i></div>
+            <div id="arrow"><i class='fas fa-arrow-right'></i></div>
+        </div> -->
+
+        
+    </div>
+</body>
+<script src="../assets/JS/task.js"> </script>
+<script src="../assets/JS/template.js"></script>
+<script src="../assets/JS/notify.js"></script>
+</html>

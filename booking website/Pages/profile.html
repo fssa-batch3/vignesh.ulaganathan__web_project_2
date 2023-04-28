@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google sign in meta tag -->
+
+
+    <title>Freshtime | Profile</title>
+
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/notify.css">
+    <!-- adding favicon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="../assets/Images/favicon.png">
+
+    <!-- Ubuntu Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    </style>
+
+    <!-- bootstrap for adding icon  -->
+    <script src="https://kit.fontawesome.com/ee40c53027.js" crossorigin="anonymous" integrity="">
+    </script>
+</head>
+
+<body>
+    <div class="main"> <!--The Total Page starts-->
+       <!-- profile starts -->
+        <div class="profile">
+
+            <!-- profile left starts -->
+            <div class="profile-left">
+
+                <!-- profile card starts -->
+                <div class="profile-card">
+                    <img src="../assets/Images/profile.jpg" alt="profile" id="profilePic">
+                    <h2>Profile:</h2>
+
+                    <label for="name">
+                        <input type="text" id="name" placeholder="Aravind" disabled>
+                        <span id="edit" onclick="enablename()" disabled>Edit</span>
+                    </label>
+
+                    <label for="phone number">
+                        <input type="text" id="phonenumber" placeholder="+91 98765 43210">
+                        <span id="edit">Edit</span>
+                    </label>
+                    <br>
+                    <label for="email">
+                        <input type="email" id="email" placeholder="aravind@gmail.com" disabled>
+                        <span id="edit">Edit</span>
+                    </label>
+
+                    <label for="password">
+                        <input type="password" id="password" placeholder="Change Password" disabled>
+                        <span id="edit" onclick="enablepassword()">Edit</span>
+                    </label>
+
+                    <div class="tag-line">
+                        <h2>Statistics:</h2>
+                        <button><i class="fa fa-fire" style="font-size:18px;color:red"></i> &nbsp; 21 Day
+                            Streak</button>
+                        <button><i class="fa fa-bolt" style="font-size:18px;color: gold;"></i> 1500 Total XP</button>
+                        <br>
+                        <button><i class="fa fa-shield" style="font-size:18px;color:gold"></i>&nbsp; Gold
+                            League</button>
+                        <button><i class="fa fa-trophy" style="font-size:18px;color:red"></i>&nbsp; 5 Times in Top
+                            3's</button>
+                    </div>
+
+                    <div class="savendel">
+                        <button class="save" onclick="editprofile()">Save</button>
+                        <button class="save" onclick="logout()">Sign Out</button>
+                    </div>
+                    
+                </div>
+                <!-- profile card ends -->
+            </div>
+            <!-- profile left ends -->
+            <div class="profile-right">
+                <div class="bio">
+                    <h3>Your Bio:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatum dignissimos consequuntur molestias sequi obcaecati
+                        totam eveniet autem omnis corporis, consectetur voluptas aperiam,
+                        dolores cum? Itaque sequi ducimus quam veritatis sed!</p>
+                </div>
+
+                <div class="personality">
+                    <h2>Personality:</h2>
+                    <div class="tag">
+                        <p>Introvert</p>
+                        <p>Extrovert</p>
+                    </div>
+                    <progress id="progress" value="25" max="100"> 65% </progress>
+                    <div class="tag">
+                        <p>Analytical</p>
+                        <p>Creative</p>
+                    </div>
+                    <progress id="progress" value="80" max="100"> 65% </progress>
+                    <div class="tag">
+                        <p>Loyal</p>
+                        <p>Fickle</p>
+                    </div>
+                    <progress id="progress" value="50" max="100"> 65% </progress>
+                    <div class="tag">
+                        <p>Passive</p>
+                        <p>Active</p>
+                    </div>
+                    <progress id="progress" value="65" max="100"> 65% </progress>
+                </div>
+                <div class="progress">
+                    <h3>Acheived Task</h3>
+                    <div class="achieved">
+                        <p>All Time <br> 100 Task</p>
+                        <p>This Week <br> 10 Task</p>
+                        <p>Today <br> 1 Task</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- profile ends -->
+    </div>
+</body>
+<script src="../assets/JS/profile.js"></script>
+<script src="../assets/JS/template.js"></script>
+<script src="../assets/JS/notify.js"></script>
+</html>
